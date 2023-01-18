@@ -34,7 +34,7 @@ def get_movie(query):
         links = movie_page_link.find_all("a", {'rel': 'noopener', 'data-wpel-link': 'internal'})
         final_links = {}
         for i in links:
-            url = f"https://adrinolinks.in/api?api=3a5a2dd1e43acdcfc17ee6271d51f80ca8f9d6c2&url=yourdestinationlink.com&alias=CustomAlias['href']}"
+            url = f"['href']}"https://adrinolinks.in/api?api=3a5a2dd1e43acdcfc17ee6271d51f80ca8f9d6c2&url=yourdestinationlink.com&alias=CustomAlias
             response = requests.get(url)
             link = response.json()
             final_links[f"{i.text}"] = link['shortenedUrl']
